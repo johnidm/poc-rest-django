@@ -24,10 +24,17 @@ from quickstart.api import PostResource
 router = routers.DefaultRouter()
 router.register(r'posts', views.PostViewSet)
 
+from django.conf.urls import url
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='Pastebin API')
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    
     url(r'^api/v2/', include(router.urls)),
+    url(r'^api/v2/docs', schema_view),
 
     url(r'api/v1/posts/', include(PostResource.urls())),
 ]

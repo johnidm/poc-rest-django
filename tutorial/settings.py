@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'quickstart',
 
     'rest_framework',
+    'rest_framework_swagger',
+
 ]
 
 MIDDLEWARE = [
@@ -104,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 REST_FRAMEWORK = {
-    'PAGE_SIZE': 10
+     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning'
 }
 
 # Internationalization
