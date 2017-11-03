@@ -1,0 +1,16 @@
+# Diretórios ignorados
+*_env/
+__pycache__/
+
+# Arquivos ignorados
+*.log
+*~
+.*
+*.sqlite3
+
+# Exceções
+!.coveragerc
+!.editorconfig
+!.gitignore
+!.isort.cfg
+!.pylintrc
